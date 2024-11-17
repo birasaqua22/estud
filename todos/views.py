@@ -9,15 +9,15 @@ class TodoListView(ListView):
     model = Todo
 
 class TodoCreateView(CreateView):
-   model = Todo,
-   fields = ['title','deadline'],
+   model = Todo
+   fields = ['title']
    success_url = reverse_lazy('todo_list')
 
 class TodoUpdateView(UpdateView):
-   model = Todo,
-   fields = ['title', 'deadline'],
+   model = Todo
+   fields = ['title']
    success_url = reverse_lazy('todo_list')
 
 class TodoDeleteView(DeleteView):
-    model = Todo,
+    model = Todo
     success_url = reverse_lazy('todo_list')
